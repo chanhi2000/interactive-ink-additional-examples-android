@@ -76,3 +76,5 @@ fastlane/readme.md
 .idea/.name
 .idea/misc.xml
 .idea/modules.xml
+
+certificate/src/main/java/com/myscript/certificate/MyCertificate.*
