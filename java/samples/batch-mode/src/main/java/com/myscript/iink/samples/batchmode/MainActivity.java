@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        engine = IInkApplication.getEngine();
+        engine = IInkApplication.Companion.getEngine();
 
         // Configure recognition
         Configuration conf = engine.getConfiguration();

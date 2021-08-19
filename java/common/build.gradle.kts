@@ -3,6 +3,11 @@
  */
 
 import com.myscript.gradle.tasks.CopyResourceAssetsTask
+val copyResourceAssets by tasks.registering(CopyResourceAssetsTask::class)
+tasks.matching { it.name == "preBuild" }.all {
+    dependsOn(copyResourceAssets)
+}
+
 
 plugins {
     id("com.android.library")
@@ -27,8 +32,4 @@ dependencies {
     api(Dep.iink)    // iink SDK.
 }
 
-val copyResourceAssets by tasks.registering(CopyResourceAssetsTask::class)
-tasks.matching { it.name == "preBuild" }.all {
-    dependsOn(copyResourceAssets)
-}
 
